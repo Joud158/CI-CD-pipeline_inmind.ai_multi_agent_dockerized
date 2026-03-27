@@ -1,0 +1,61 @@
+services:
+  gateway:
+    build:
+      context: ./gateway
+    container_name: agent-gateway
+    ports:
+      - "8001:8000"
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: agronomy
+      DB_USER: agronomy
+      DB_PASSWORD: agronomy
+      RAG_URL: http://rag:8001
+    depends_on:
+      db:
+        condition: service_healthy
+      rag:
+        condition: service_started
+    networks:
+      - public_net
+      - private_net
+
+  rag:
+    build:
+      context: ./rag_service
+    container_name: rag-service
+    expose:
+      - "8001"
+    networks:
+      - private_net
+
+  db:
+    image: postgres:16-alpine
+    container_name: agronomy-db
+    environment:
+      POSTGRES_DB: agronomy
+      POSTGRES_USER: agronomy
+      POSTGRES_PASSWORD: agronomy
+    expose:
+      - "5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U agronomy -d agronomy"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - private_net
+
+networks:
+  public_net:
+    driver: bridge
+
+  private_net:
+    driver: bridge
+    internal: true
+
+volumes:
+  pgdata:
