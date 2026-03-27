@@ -1,0 +1,136 @@
+question,expected_source,retrieved_sources,retrieved_chunk_ids,retrieval_hit_at_k,citation_present,keyword_recall_proxy,top1_similarity,answer,human_correctness_0_to_1,human_groundedness_0_to_1,human_helpfulness_0_to_1
+My zucchini leaves have white powdery spots. What is the likely problem and what should I do first?,01_crop_diagnostics.txt,01_crop_diagnostics.txt | 01_crop_diagnostics.txt | 01_crop_diagnostics.txt | 01_crop_diagnostics.txt,01_crop_diagnostics.txt::chunk1 | 01_crop_diagnostics.txt::chunk2 | 01_crop_diagnostics.txt::chunk3 | 01_crop_diagnostics.txt::chunk0,1,1,0.5,0.6078,"Fallback answer based on retrieved context:
+- - White, powder-like patches on the upper leaf surface; later, patches spread and leaves yellow and dry. [01_crop_diagnostics.txt::chunk1]
+- - Often appears after warm days and cool nights; dense canopy and poor air flow increases risk. [01_crop_diagnostics.txt::chunk1]
+- - A fungal disease; spores move by wind and can spread quickly. [01_crop_diagnostics.txt::chunk1]
+- - A fungal disease; spores move by wind and can spread quickly. [01_crop_diagnostics.txt::chunk2]
+- 1) Cultural [01_crop_diagnostics.txt::chunk2]
+- - Increase spacing; prune to improve air movement. [01_crop_diagnostics.txt::chunk2]
+- - Avoid excess nitrogen late in the season (too much soft growth). [01_crop_diagnostics.txt::chunk2]
+- - Remove heavily infected leaves early; do not compost if infection is severe. [01_crop_diagnostics.txt::chunk2]",,,
+What field pattern usually suggests irrigation or equipment issues instead of disease?,01_crop_diagnostics.txt,01_crop_diagnostics.txt | 02_irrigation_water.txt | 02_irrigation_water.txt | 03_soil_nutrition.txt,01_crop_diagnostics.txt::chunk0 | 02_irrigation_water.txt::chunk1 | 02_irrigation_water.txt::chunk3 | 03_soil_nutrition.txt::chunk2,1,1,1.0,0.5177,"Fallback answer based on retrieved context:
+- - Look at distribution: random spots often indicate disease; straight lines often indicate irrigation or equipment issues. [01_crop_diagnostics.txt::chunk0]
+- - Check old vs new leaves: nutrient issues often show patterns (e.g., nitrogen on older leaves first). [01_crop_diagnostics.txt::chunk0]
+- - Inspect underside of leaves for mites, eggs, and fungal growth. [01_crop_diagnostics.txt::chunk0]
+- - Cut stems: brown vascular tissue can indicate wilts. [01_crop_diagnostics.txt::chunk0]
+- - Smell and feel: bacterial soft rots often smell and feel watery. [01_crop_diagnostics.txt::chunk0]
+- - Dig a small hole 20–30 cm deep. [02_irrigation_water.txt::chunk1]
+- - Squeeze soil: if it forms a weak ball and crumbles, you’re near the irrigation threshold. [02_irrigation_water.txt::chunk1]
+- - If it forms a sticky ribbon, it may be too wet. [02_irrigation_water.txt::chunk1]",,,
+What symptom pattern suggests early blight on tomato?,01_crop_diagnostics.txt,01_crop_diagnostics.txt | 01_crop_diagnostics.txt | 02_irrigation_water.txt | 01_crop_diagnostics.txt,01_crop_diagnostics.txt::chunk3 | 01_crop_diagnostics.txt::chunk0 | 02_irrigation_water.txt::chunk1 | 01_crop_diagnostics.txt::chunk1,1,1,0.667,0.6784,"Fallback answer based on retrieved context:
+- - Concentric “target” rings on older leaves; leaf drop starts from the bottom. [01_crop_diagnostics.txt::chunk3]
+- - Risk increases with leaf wetness (overhead irrigation) and warm humid conditions. [01_crop_diagnostics.txt::chunk3]
+- - Reduce leaf wetness: drip irrigation, morning watering, staking, mulching. [01_crop_diagnostics.txt::chunk3]
+- - Remove lower leaves touching soil; sanitize tools. [01_crop_diagnostics.txt::chunk3]
+- - Use yellow sticky cards as an early warning. [01_crop_diagnostics.txt::chunk3]
+- - Control weeds around the plot (virus reservoirs). [01_crop_diagnostics.txt::chunk3]
+- - If virus symptoms appear, remove infected plants early to protect the rest. [01_crop_diagnostics.txt::chunk3]
+- - Look at distribution: random spots often indicate disease; straight lines often indicate irrigation or equipment issues. [01_crop_diagnostics.txt::chunk0]",,,
+What is the best irrigation style for sandy soil during hot periods?,02_irrigation_water.txt,02_irrigation_water.txt | 02_irrigation_water.txt | 02_irrigation_water.txt | 02_irrigation_water.txt,02_irrigation_water.txt::chunk0 | 02_irrigation_water.txt::chunk2 | 02_irrigation_water.txt::chunk1 | 02_irrigation_water.txt::chunk3,1,1,1.0,0.6012,"Fallback answer based on retrieved context:
+- - Low water-holding capacity; water moves fast. [02_irrigation_water.txt::chunk0]
+- - Best practice: shorter, more frequent irrigations (e.g., daily or every 2 days in hot periods). [02_irrigation_water.txt::chunk0]
+- - Balanced holding capacity; moderate frequency. [02_irrigation_water.txt::chunk0]
+- - High holding, slow infiltration; longer but less frequent irrigation; avoid saturating because roots need oxygen. [02_irrigation_water.txt::chunk0]
+- - Root depth (vegetables): often 20–40 cm early, 40–60 cm later. [02_irrigation_water.txt::chunk0]
+- - Allowable depletion (rule of thumb): irrigate when ~30–50% of available water is used. [02_irrigation_water.txt::chunk0]
+- - Use drip to concentrate water near roots. [02_irrigation_water.txt::chunk2]
+- - Occasionally apply a leaching irrigation if drainage is adequate. [02_irrigation_water.txt::chunk2]",,,
+"During tomato flowering and fruit set, why should irrigation stay consistent?",02_irrigation_water.txt,02_irrigation_water.txt | 03_soil_nutrition.txt | 02_irrigation_water.txt | 02_irrigation_water.txt,02_irrigation_water.txt::chunk1 | 03_soil_nutrition.txt::chunk2 | 02_irrigation_water.txt::chunk0 | 02_irrigation_water.txt::chunk2,1,1,1.0,0.6831,"Fallback answer based on retrieved context:
+- - Dig a small hole 20–30 cm deep. [02_irrigation_water.txt::chunk1]
+- - Squeeze soil: if it forms a weak ball and crumbles, you’re near the irrigation threshold. [02_irrigation_water.txt::chunk1]
+- - If it forms a sticky ribbon, it may be too wet. [02_irrigation_water.txt::chunk1]
+- - After transplanting (first 7–10 days): frequent small irrigations to reduce stress. [02_irrigation_water.txt::chunk1]
+- - Vegetative growth: steady moisture; avoid big swings. [02_irrigation_water.txt::chunk1]
+- - Flowering/fruit set: water stress can reduce fruit set; prioritize consistent irrigation. [02_irrigation_water.txt::chunk1]
+- - Ripening: slightly reduce water to limit cracking, but do not let plants wilt. [02_irrigation_water.txt::chunk1]
+- - Iron deficiency: yellow young leaves with green veins (common in high pH). [03_soil_nutrition.txt::chunk2]",,,
+Give a simple sandy-soil drip irrigation recipe and what signs to watch.,02_irrigation_water.txt,02_irrigation_water.txt | 02_irrigation_water.txt | 02_irrigation_water.txt | 02_irrigation_water.txt,02_irrigation_water.txt::chunk2 | 02_irrigation_water.txt::chunk1 | 02_irrigation_water.txt::chunk0 | 02_irrigation_water.txt::chunk3,1,1,0.667,0.5608,"Fallback answer based on retrieved context:
+- - Use drip to concentrate water near roots. [02_irrigation_water.txt::chunk2]
+- - Occasionally apply a leaching irrigation if drainage is adequate. [02_irrigation_water.txt::chunk2]
+- - Mulch to reduce evaporation (evaporation leaves salts behind). [02_irrigation_water.txt::chunk2]
+- - Start with 20–30 minutes per day (or per irrigation cycle), then adjust using plant response. [02_irrigation_water.txt::chunk2]
+- - In hot windy days, split into 2 cycles (morning + late afternoon) to reduce deep percolation loss. [02_irrigation_water.txt::chunk2]
+- - Watch leaves at midday: mild midday droop can be normal; severe droop that continues into evening means under-watering. [02_irrigation_water.txt::chunk2]
+- - Dig a small hole 20–30 cm deep. [02_irrigation_water.txt::chunk1]
+- - Squeeze soil: if it forms a weak ball and crumbles, you’re near the irrigation threshold. [02_irrigation_water.txt::chunk1]",,,
+What does a sticky soil ribbon indicate when checking irrigation timing?,02_irrigation_water.txt,02_irrigation_water.txt | 02_irrigation_water.txt | 02_irrigation_water.txt | 02_irrigation_water.txt,02_irrigation_water.txt::chunk3 | 02_irrigation_water.txt::chunk0 | 02_irrigation_water.txt::chunk2 | 02_irrigation_water.txt::chunk1,1,1,0.0,0.5087,"Fallback answer based on retrieved context:
+- - Low water-holding capacity; water moves fast. [02_irrigation_water.txt::chunk0]
+- - Best practice: shorter, more frequent irrigations (e.g., daily or every 2 days in hot periods). [02_irrigation_water.txt::chunk0]
+- - Balanced holding capacity; moderate frequency. [02_irrigation_water.txt::chunk0]
+- - High holding, slow infiltration; longer but less frequent irrigation; avoid saturating because roots need oxygen. [02_irrigation_water.txt::chunk0]
+- - Root depth (vegetables): often 20–40 cm early, 40–60 cm later. [02_irrigation_water.txt::chunk0]
+- - Allowable depletion (rule of thumb): irrigate when ~30–50% of available water is used. [02_irrigation_water.txt::chunk0]
+- - Use drip to concentrate water near roots. [02_irrigation_water.txt::chunk2]
+- - Occasionally apply a leaching irrigation if drainage is adequate. [02_irrigation_water.txt::chunk2]",,,
+Why should you start with a soil test before fertilizing?,03_soil_nutrition.txt,03_soil_nutrition.txt | 03_soil_nutrition.txt | 02_irrigation_water.txt | 01_crop_diagnostics.txt,03_soil_nutrition.txt::chunk0 | 03_soil_nutrition.txt::chunk2 | 02_irrigation_water.txt::chunk0 | 01_crop_diagnostics.txt::chunk0,1,1,0.5,0.5816,"Fallback answer based on retrieved context:
+- - pH (affects nutrient availability) [03_soil_nutrition.txt::chunk0]
+- - Organic matter (buffering and water holding) [03_soil_nutrition.txt::chunk0]
+- - Electrical conductivity (salinity) [03_soil_nutrition.txt::chunk0]
+- - N, P, K levels; plus micronutrients (Fe, Zn, B) [03_soil_nutrition.txt::chunk0]
+- - Low organic matter: nutrients leach quickly; split applications work better. [03_soil_nutrition.txt::chunk0]
+- - High pH (alkaline): iron and zinc become less available; chlorosis can appear on young leaves. [03_soil_nutrition.txt::chunk0]
+- - Very high phosphorus: can reduce zinc uptake. [03_soil_nutrition.txt::chunk0]
+- - Nitrogen (N): vegetative growth, leaf color; too much causes soft growth and disease risk. [03_soil_nutrition.txt::chunk0]",,,
+Why do split fertilizer applications help in low-organic-matter or sandy soils?,03_soil_nutrition.txt,03_soil_nutrition.txt | 03_soil_nutrition.txt | 02_irrigation_water.txt | 03_soil_nutrition.txt,03_soil_nutrition.txt::chunk1 | 03_soil_nutrition.txt::chunk2 | 02_irrigation_water.txt::chunk0 | 03_soil_nutrition.txt::chunk0,1,1,1.0,0.4388,"Fallback answer based on retrieved context:
+- - Less leaching, especially in sandy soils. [03_soil_nutrition.txt::chunk1]
+- - More stable growth. [03_soil_nutrition.txt::chunk1]
+- - Easier to correct if plants respond badly. [03_soil_nutrition.txt::chunk1]
+- 1) At planting [03_soil_nutrition.txt::chunk1]
+- - Provide a balanced starter (includes P) near the seed piece. [03_soil_nutrition.txt::chunk1]
+- 2) Early growth (2–4 weeks) [03_soil_nutrition.txt::chunk1]
+- - Nitrogen in small weekly doses to build canopy. [03_soil_nutrition.txt::chunk1]
+- 3) Tuber initiation [03_soil_nutrition.txt::chunk1]",,,
+What potassium-related warning sign is mentioned in the notes?,03_soil_nutrition.txt,03_soil_nutrition.txt | 01_crop_diagnostics.txt | 03_soil_nutrition.txt | 01_crop_diagnostics.txt,03_soil_nutrition.txt::chunk0 | 01_crop_diagnostics.txt::chunk0 | 03_soil_nutrition.txt::chunk2 | 01_crop_diagnostics.txt::chunk3,1,1,0.333,0.3583,"Fallback answer based on retrieved context:
+- - pH (affects nutrient availability) [03_soil_nutrition.txt::chunk0]
+- - Organic matter (buffering and water holding) [03_soil_nutrition.txt::chunk0]
+- - Electrical conductivity (salinity) [03_soil_nutrition.txt::chunk0]
+- - N, P, K levels; plus micronutrients (Fe, Zn, B) [03_soil_nutrition.txt::chunk0]
+- - Low organic matter: nutrients leach quickly; split applications work better. [03_soil_nutrition.txt::chunk0]
+- - High pH (alkaline): iron and zinc become less available; chlorosis can appear on young leaves. [03_soil_nutrition.txt::chunk0]
+- - Very high phosphorus: can reduce zinc uptake. [03_soil_nutrition.txt::chunk0]
+- - Nitrogen (N): vegetative growth, leaf color; too much causes soft growth and disease risk. [03_soil_nutrition.txt::chunk0]",,,
+How should lettuce be handled when there is no cold chain?,04_postharvest_supplychain.txt,04_postharvest_supplychain.txt | 01_crop_diagnostics.txt | 03_soil_nutrition.txt | 01_crop_diagnostics.txt,04_postharvest_supplychain.txt::chunk0 | 01_crop_diagnostics.txt::chunk4 | 03_soil_nutrition.txt::chunk1 | 01_crop_diagnostics.txt::chunk2,1,1,0.0,0.5592,"Fallback answer based on retrieved context:
+- 1) Harvest at the right maturity. [04_postharvest_supplychain.txt::chunk0]
+- 2) Remove field heat quickly (cooling). [04_postharvest_supplychain.txt::chunk0]
+- 3) Protect from crushing and moisture loss during transport. [04_postharvest_supplychain.txt::chunk0]
+- - Wilting from water loss [04_postharvest_supplychain.txt::chunk0]
+- - Browning and decay if too warm [04_postharvest_supplychain.txt::chunk0]
+- - Crushing in transport [04_postharvest_supplychain.txt::chunk0]
+- Best practice workflow: [04_postharvest_supplychain.txt::chunk0]
+- - Harvest early morning when leaves are cool and turgid. [04_postharvest_supplychain.txt::chunk0]",,,
+What are the three main post-harvest rules?,04_postharvest_supplychain.txt,04_postharvest_supplychain.txt | 05_farm_business_pricing.txt | 04_postharvest_supplychain.txt | 05_farm_business_pricing.txt,04_postharvest_supplychain.txt::chunk0 | 05_farm_business_pricing.txt::chunk1 | 04_postharvest_supplychain.txt::chunk1 | 05_farm_business_pricing.txt::chunk2,1,1,1.0,0.487,"Fallback answer based on retrieved context:
+- 1) Harvest at the right maturity. [04_postharvest_supplychain.txt::chunk0]
+- 2) Remove field heat quickly (cooling). [04_postharvest_supplychain.txt::chunk0]
+- 3) Protect from crushing and moisture loss during transport. [04_postharvest_supplychain.txt::chunk0]
+- - Wilting from water loss [04_postharvest_supplychain.txt::chunk0]
+- - Browning and decay if too warm [04_postharvest_supplychain.txt::chunk0]
+- - Crushing in transport [04_postharvest_supplychain.txt::chunk0]
+- Best practice workflow: [04_postharvest_supplychain.txt::chunk0]
+- - Harvest early morning when leaves are cool and turgid. [04_postharvest_supplychain.txt::chunk0]",,,
+What transport checklist items reduce post-harvest losses?,04_postharvest_supplychain.txt,04_postharvest_supplychain.txt | 04_postharvest_supplychain.txt | 03_soil_nutrition.txt | 05_farm_business_pricing.txt,04_postharvest_supplychain.txt::chunk1 | 04_postharvest_supplychain.txt::chunk0 | 03_soil_nutrition.txt::chunk2 | 05_farm_business_pricing.txt::chunk1,1,1,1.0,0.5005,"Fallback answer based on retrieved context:
+- - Strong crates prevent compression damage. [04_postharvest_supplychain.txt::chunk1]
+- - Stack in a stable pattern; avoid tall unstable stacks. [04_postharvest_supplychain.txt::chunk1]
+- - Use liners for delicate produce, but ensure ventilation. [04_postharvest_supplychain.txt::chunk1]
+- - farm name, date, crop, field section [04_postharvest_supplychain.txt::chunk1]
+- - Clean truck bed [04_postharvest_supplychain.txt::chunk1]
+- - Shade or cover from direct sun [04_postharvest_supplychain.txt::chunk1]
+- - Secure crates to avoid sliding [04_postharvest_supplychain.txt::chunk1]
+- - Keep produce away from chemicals and fuel odors [04_postharvest_supplychain.txt::chunk1]",,,
+How do you decide whether buying a fungicide makes financial sense?,05_farm_business_pricing.txt,05_farm_business_pricing.txt | 01_crop_diagnostics.txt | 05_farm_business_pricing.txt | 01_crop_diagnostics.txt,05_farm_business_pricing.txt::chunk0 | 01_crop_diagnostics.txt::chunk4 | 05_farm_business_pricing.txt::chunk1 | 01_crop_diagnostics.txt::chunk0,1,1,0.0,0.5184,"Fallback answer based on retrieved context:
+- # Chapter 5 — Farm Business Decisions Under Price Volatility [05_farm_business_pricing.txt::chunk0]
+- - Seeds/seedlings [05_farm_business_pricing.txt::chunk0]
+- - Fertilizers [05_farm_business_pricing.txt::chunk0]
+- - Pesticides [05_farm_business_pricing.txt::chunk0]
+- - Water and pumping [05_farm_business_pricing.txt::chunk0]
+- - Labor [05_farm_business_pricing.txt::chunk0]
+- - Transport and packaging [05_farm_business_pricing.txt::chunk0]
+- 1) How much yield is at risk without treatment? [05_farm_business_pricing.txt::chunk0]",,,
+What are two practical habits for managing exchange-rate risk on the farm?,05_farm_business_pricing.txt,05_farm_business_pricing.txt | 05_farm_business_pricing.txt | 05_farm_business_pricing.txt | 04_postharvest_supplychain.txt,05_farm_business_pricing.txt::chunk1 | 05_farm_business_pricing.txt::chunk0 | 05_farm_business_pricing.txt::chunk2 | 04_postharvest_supplychain.txt::chunk0,1,1,1.0,0.6378,"Fallback answer based on retrieved context:
+- - Treat only if (expected saved revenue) > (cost of treatment) and resistance risk is acceptable. [05_farm_business_pricing.txt::chunk1]
+- - Keep records in both LBP and USD equivalent at purchase date. [05_farm_business_pricing.txt::chunk1]
+- - If possible, buy high-impact inputs early for the season when prices are favorable. [05_farm_business_pricing.txt::chunk1]
+- - Use group purchasing (co-ops) to reduce unit cost and improve negotiating power. [05_farm_business_pricing.txt::chunk1]
+- - Pre-agreeing on price ranges with buyers. [05_farm_business_pricing.txt::chunk1]
+- - Diversifying crops so one market crash doesn’t wipe you out. [05_farm_business_pricing.txt::chunk1]
+- - Adding value (washing, grading, packaging) when it increases price more than it increases cost. [05_farm_business_pricing.txt::chunk1]
+- # Chapter 5 — Farm Business Decisions Under Price Volatility [05_farm_business_pricing.txt::chunk0]",,,

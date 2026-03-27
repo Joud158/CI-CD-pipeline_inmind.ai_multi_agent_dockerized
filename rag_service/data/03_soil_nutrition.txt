@@ -1,0 +1,9 @@
+# Soil and nutrition
+
+Nitrogen deficiency can cause pale leaves and weak vegetative growth.
+Soil management basics:
+- Start with soil testing when possible.
+- Apply fertilizer based on the deficiency, not guesswork.
+- Over-fertilization can worsen plant stress.
+- Record what was applied and when.
+Decision note: confirm the problem before adding nutrients.

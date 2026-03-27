@@ -1,0 +1,9 @@
+# Irrigation and water
+
+Irrigation decisions should be based on crop stage, soil condition, and recent weather.
+Best practices:
+- Water early in the morning when possible.
+- Avoid keeping foliage wet for long periods.
+- Deep, less frequent irrigation is usually better than shallow daily watering.
+- Check for drainage problems before increasing irrigation.
+Decision note: do not confuse disease symptoms with water stress.
